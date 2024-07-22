@@ -1,0 +1,17 @@
+---
+import faviconLight from '../images/favicon-light.png';
+import faviconDark from '../images/favicon-dark.png';
+---
+<script>
+import {theme} from '../scripts/theme.js';
+localStorage.setItem('theme', theme());
+</script>
+
+<script define:vars={{faviconLight, faviconDark}}>
+    document.getElementById("favicon").setAttribute("href", localStorage.getItem('theme') == 'light' ? faviconDark.src : faviconLight.src)
+</script>
+
+<script>
+    import '../scripts/typeeffectfooter.js'
+</script>
+
