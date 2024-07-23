@@ -1,7 +1,7 @@
 import TypeIt from 'typeit';
 import KUTE from 'kute.js'
 
-const technologies = ["Astro", "Tailwind CSS", "daisyUI", "TypeIt", "KUTE.js"];
+const technologies = ["Astro", "Tailwind CSS", "daisyUI", "TypeIt", "KUTE.js", "Cluade 3.5"];
 
 // Writing technologies in the footer.
 function executeTechs(){

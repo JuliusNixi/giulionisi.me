@@ -4,14 +4,21 @@ import faviconDark from '../images/favicon-dark.png';
 ---
 
 <script>
-import {theme} from '../scripts/theme.js';
-localStorage.setItem('theme', theme());
+    import '../scripts/theme.js'
 </script>
 
-<script define:vars={{faviconLight, faviconDark}}>
-    let logotheme = localStorage.getItem('theme') == 'light' ? faviconDark.src : faviconLight.src;
-    document.getElementById("favicon").setAttribute("href", logotheme);
-    document.getElementById("header-logo").setAttribute("src", logotheme);
+<script define:vars={{ faviconLight, faviconDark }}>
+    // Executed client side.
+    document.addEventListener('DOMContentLoaded', (event) => {
+        window.darkModePath = faviconDark.src;
+        window.lightModePath = faviconLight.src;
+
+        if (window.currentTheme()) {
+            window.darkModeFunction();
+        } else {
+            window.lightModeFunction();
+        }
+    });
 </script>
 
 <script>
