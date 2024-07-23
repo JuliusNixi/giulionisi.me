@@ -2,13 +2,16 @@
 import faviconLight from '../images/favicon-light.png';
 import faviconDark from '../images/favicon-dark.png';
 ---
+
 <script>
 import {theme} from '../scripts/theme.js';
 localStorage.setItem('theme', theme());
 </script>
 
 <script define:vars={{faviconLight, faviconDark}}>
-    document.getElementById("favicon").setAttribute("href", localStorage.getItem('theme') == 'light' ? faviconDark.src : faviconLight.src)
+    let logotheme = localStorage.getItem('theme') == 'light' ? faviconDark.src : faviconLight.src;
+    document.getElementById("favicon").setAttribute("href", logotheme);
+    document.getElementById("header-logo").setAttribute("src", logotheme);
 </script>
 
 <script>

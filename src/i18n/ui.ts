@@ -11,8 +11,10 @@ export const languages = {
       'nav.about': 'About',
       'nav.twitter': 'Twitter',
     },
-    fr: {
-      'nav.home': 'Accueil',
-      'nav.about': 'À propos',
+    it: {
+      'nav.home': 'Pagina Principale',
+      'nav.about': 'Su di me',
     },
   } as const;
+
+  

@@ -2,15 +2,16 @@
 interface Props {
 	title: string;
 }
-
 const { title } = Astro.props;
 
 import '../styles/global.css';
 
 import Head from '../components/Head.astro'
-import Scripts from '../components/Scripts.astro';
+import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro';
+import Scripts from '../components/Scripts.astro';
 ---
+
 <!doctype html>
 <html>
     <head>
@@ -19,7 +20,11 @@ import Footer from '../components/Footer.astro';
     </head>
 
     <body class="no-select">
+
+      <Header />
+
         <div class="container mx-auto min-h-screen flex flex-col">
+
             <main class="flex-grow flex flex-col justify-center"> 
               <div class="flex flex-col items-center">
 
@@ -27,11 +32,15 @@ import Footer from '../components/Footer.astro';
                 
               </div>
             </main> 
-            <footer class="footer footer-center text-base-content p-4">
+
+            <footer class="footer footer-center p-4">
               <Footer />
             </footer>
+            
           </div>
     </body>
+
     <Scripts />
+
 </html>
 
