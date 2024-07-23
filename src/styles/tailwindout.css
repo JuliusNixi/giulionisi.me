@@ -2134,9 +2134,17 @@ html {
   z-index: 10;
 }
 
+.col-span-3 {
+  grid-column: span 3 / span 3;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+
+.ml-4 {
+  margin-left: 1rem;
 }
 
 .inline-block {
@@ -2187,8 +2195,20 @@ html {
   width: 13rem;
 }
 
+.w-full {
+  width: 100%;
+}
+
+.w-screen {
+  width: 100vw;
+}
+
 .max-w-prose {
   max-width: 65ch;
+}
+
+.max-w-screen-xl {
+  max-width: 1280px;
 }
 
 .flex-grow {
@@ -2217,8 +2237,20 @@ html {
   align-items: center;
 }
 
+.justify-start {
+  justify-content: flex-start;
+}
+
 .justify-center {
   justify-content: center;
+}
+
+.justify-items-start {
+  justify-items: start;
+}
+
+.justify-items-stretch {
+  justify-items: stretch;
 }
 
 .gap-4 {
@@ -2244,6 +2276,11 @@ html {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-gray-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+
 .fill-current {
   fill: currentColor;
 }
@@ -2267,8 +2304,17 @@ html {
   padding-bottom: 1rem;
 }
 
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .text-center {
   text-align: center;
+}
+
+.text-right {
+  text-align: right;
 }
 
 .opacity-70 {
@@ -2307,12 +2353,37 @@ html {
 }
 
 @media (min-width: 640px) {
+  .sm\:order-1 {
+    order: 1;
+  }
+
+  .sm\:col-span-1 {
+    grid-column: span 1 / span 1;
+  }
+
   .sm\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .sm\:justify-items-stretch {
+    justify-items: stretch;
+  }
+
+  .sm\:justify-self-start {
+    justify-self: start;
+  }
+
+  .sm\:px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
   .sm\:text-left {
     text-align: left;
+  }
+
+  .sm\:text-center {
+    text-align: center;
   }
 
   .sm\:text-right {
@@ -2321,12 +2392,25 @@ html {
 }
 
 @media (min-width: 1024px) {
+  .lg\:ml-8 {
+    margin-left: 2rem;
+  }
+
   .lg\:flex {
     display: flex;
   }
 
   .lg\:hidden {
     display: none;
+  }
+
+  .lg\:justify-start {
+    justify-content: flex-start;
+  }
+
+  .lg\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }
 
