@@ -1,8 +1,8 @@
 ---
 import profilePicture from '../images/profile.png';
 import { Image } from 'astro:assets';
+import '../styles/homepage.css'
 ---
-
 <div class="flex flex-col items-center">
     
     <div class="avatar">
@@ -11,7 +11,7 @@ import { Image } from 'astro:assets';
                 <Image src={profilePicture} alt="My personal profile." loading='eager'/>
             </div>
         </div>
-        <div class="absolute inset-0 rounded-full bg-white blur-xl opacity-70 animate-pulse"></div>
+        <div class="absolute inset-0 rounded-full bg-gray-700 dark:bg-base-content blur-xl opacity-100 animate-pulse"></div>
     </div>
 
     <div class="py-3">
@@ -24,12 +24,13 @@ import { Image } from 'astro:assets';
     </div>
 
 
-    <p class="text-center max-w-prose">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi voluptatibus optio ut cumque, earum blanditiis expedita dolores consectetur quaerat enim similique nihil consequatur eos nam quam corrupti sint libero perspiciatis.</p>          
+    <p id="quote" class="text-center max-w-prose">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi voluptatibus optio ut cumque, earum blanditiis expedita dolores consectetur quaerat enim similique nihil consequatur eos nam quam corrupti sint libero perspiciatis.</p>          
 
 </div>
 
 <script>
     import '../scripts/typeeffecthomepage.js';
+    import '../scripts/quoteshomepage.js'
 </script>
 
  

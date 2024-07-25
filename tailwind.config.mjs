@@ -2,22 +2,7 @@
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
-		extend: {
-		  typography: {
-			DEFAULT: {
-			  css: {
-				'.title-gradient': {
-					background: '#009FFF',  /* fallback for old browsers */
-					background: '-webkit-linear-gradient(to left, #ec2F4B, #009FFF)',  /* Chrome 10-25, Safari 5.1-6 */
-					background: 'linear-gradient(to left, #ec2F4B, #009FFF)', /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-					'-webkit-background-clip': 'text', /* Usa il background clip per il testo */
-					'background-clip': 'text',
-					color: 'transparent',
-				},
-			  },
-			},
-		  },
-		},
+
 	  },
 	plugins: [
 		require("@tailwindcss/typography"),
@@ -34,4 +19,5 @@ export default {
 		logs: true, // Shows info about daisyUI version and used config in the console when building your CSS
 		themeRoot: ":root", // The element that receives theme color CSS variables
 	  },
+	  darkMode: ['class', '[data-theme="dark"]']
 }
