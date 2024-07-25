@@ -1,14 +1,14 @@
 ---
-import faviconLight from '../images/favicon-light.png';
-import faviconDark from '../images/favicon-dark.png';
+// Should stay here (in public/ not src/images/) to not get error in JS console.
+import faviconLight from '../../public/favicon-light.png';
+import faviconDark from '../../public/favicon-dark.png';
 ---
 
 <script>
     import '../scripts/theme.js'
 </script>
-
 <script define:vars={{ faviconLight, faviconDark }}>
-    // Executed client side.
+    // Executed client side, before must be the theme.js import and execution.
     document.addEventListener('DOMContentLoaded', (event) => {
         window.darkModePath = faviconDark.src;
         window.lightModePath = faviconLight.src;

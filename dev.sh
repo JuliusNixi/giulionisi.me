@@ -1,0 +1,1 @@
+npx tailwindcss -i ./src/styles/tailwindin.css -o ./src/styles/tailwindout.css --watch && npm run dev &

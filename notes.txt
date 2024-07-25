@@ -1,0 +1,2 @@
+First designed for mobile, the classes without media selector are applied on mobile by default.
+On large screens, using the selector lg: we specify classes for large screens that override the default ones.

@@ -15,10 +15,12 @@ function decrypt(text, shift = 3) {
 }
 
 // Envelope click.
-document.getElementById("envelope").addEventListener("click", function(event) {
-    event.preventDefault(); // Prevent the default link behavior.
-    let i = prompt(captchatext);
-    if (i.toLowerCase() == decrypt("jlxolr")) window.open(`mailto:${decrypt("sxeolf@jlxolrqlvl.lw")}`, '_blank');
-    else alert(captchawrong);
+document.addEventListener('DOMContentLoaded', (event) => {
+    return;
+    document.getElementById("envelope").addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent the default link behavior.
+        let i = prompt(captchatext);
+        if (i.toLowerCase() == decrypt("jlxolr")) window.open(`mailto:${decrypt("sxeolf@jlxolrqlvl.lw")}`, '_blank');
+        else alert(captchawrong);
+    });
 });
-
