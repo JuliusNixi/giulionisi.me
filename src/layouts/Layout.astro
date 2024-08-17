@@ -5,11 +5,15 @@ interface Props {
 const { title } = Astro.props;
 
 import '../styles/global.css';
+import 'katex/dist/katex.min.css';
 
 import Head from '../components/Head.astro'
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro';
 import Scripts from '../components/Scripts.astro';
+
+import { fade } from 'astro:transitions';
+
 ---
 
 <!doctype html>
@@ -23,7 +27,7 @@ import Scripts from '../components/Scripts.astro';
 
       <Header />
 
-        <main class="flex-grow flex flex-col justify-center items-center"> 
+        <main transition:animate={fade({ duration: '1s' })} class="flex-grow flex flex-col justify-center items-center"> 
 
             <slot /> 
             

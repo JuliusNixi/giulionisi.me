@@ -1,14 +1,12 @@
 ---
-// Should stay here (in public/ not src/images/) to not get error in JS console.
+// No in images, because are processed client side with JS.
 import faviconLight from '../../public/favicon-light.png';
 import faviconDark from '../../public/favicon-dark.png';
 ---
 
-<script>
-    import '../scripts/theme.js'
-</script>
+<script src="../scripts/theme.js"></script>
 <script define:vars={{ faviconLight, faviconDark }}>
-    // Executed client side, before must be the theme.js import and execution.
+    // Executed client side, before must be the theme.js execution.
     document.addEventListener('DOMContentLoaded', (event) => {
         window.darkModePath = faviconDark.src;
         window.lightModePath = faviconLight.src;
@@ -21,11 +19,9 @@ import faviconDark from '../../public/favicon-dark.png';
     });
 </script>
 
+<script src="../scripts/footer.js"></script>
+
 <script>
-    import '../scripts/typeeffectfooter.js'
-    import '../scripts/envelopecaptcha.js'
+    import { navigate } from 'astro:transitions/client';
+    window.astroNavigate = navigate;
 </script>
-
-<script src="https://kit.fontawesome.com/4264fd6038.js" crossorigin="anonymous">
-</script>
-

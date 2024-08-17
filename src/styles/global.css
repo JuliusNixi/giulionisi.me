@@ -4,9 +4,6 @@
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none; /* Standard */
 } 
-footer, .content {
-    padding: var(--navbar-padding, 0.5rem /* 8px */);
-}
 
 
 

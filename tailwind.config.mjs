@@ -2,7 +2,7 @@
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
-
+		// Tailwind custom things.
 	  },
 	plugins: [
 		require("@tailwindcss/typography"),
@@ -19,5 +19,6 @@ export default {
 		logs: true, // Shows info about daisyUI version and used config in the console when building your CSS
 		themeRoot: ":root", // The element that receives theme color CSS variables
 	  },
+	  // Link Tailwind to daisyUI to use cross dark themes settings.
 	  darkMode: ['class', '[data-theme="dark"]']
 }

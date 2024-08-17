@@ -2,7 +2,7 @@
 import Navbar from "./Navbar.astro";
 ---
 
-<div class="navbar">
+<div transition:persist class="navbar mb-8">
     <div class="navbar-start">
 
       <div class="dropdown">
@@ -27,14 +27,14 @@ import Navbar from "./Navbar.astro";
         </ul>
       </div>
 
-      <img class="w-10 h-10" id="header-logo" />
+      <img onclick="astroNavigate('/')" class="w-10 h-10" id="header-logo" />
 
-      <p class="mx-2 text-nowrap text-lg italic font-bold">Giulio Nisi</p>
+      <p onclick="astroNavigate('/')" class="mx-2 text-nowrap text-lg italic font-bold">Giulio Nisi</p>
       
     </div>
 
     <div class="navbar-center hidden lg:flex">
-      <ul class="menu menu-horizontal">
+      <ul class="menu menu-horizontal text-base">
         <Navbar />
       </ul>
     </div>

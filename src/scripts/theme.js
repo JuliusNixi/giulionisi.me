@@ -1,4 +1,4 @@
-export function currentTheme() {
+function currentTheme() {
   return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 }
 
@@ -10,18 +10,19 @@ function handleThemeChange(event) {
   }
 }
 
-export function darkModeFunction() {
+function darkModeFunction() {
   document.documentElement.setAttribute('data-theme', 'dark');
   document.getElementById("favicon").setAttribute("href", window.lightModePath);
   document.getElementById("header-logo").setAttribute("src", window.lightModePath);
 }
 
-export function lightModeFunction() {
+function lightModeFunction() {
   document.documentElement.setAttribute('data-theme', 'light');
   document.getElementById("favicon").setAttribute("href", window.darkModePath);
   document.getElementById("header-logo").setAttribute("src", window.darkModePath);
 }
 
+// Listen to change of system theme.
 const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
 darkModeMediaQuery.addEventListener('change', handleThemeChange);
 
