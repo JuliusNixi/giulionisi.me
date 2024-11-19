@@ -1,7 +1,7 @@
 window.typeItInstanceFooter = null;
 window.kuteAnimationFooter = null;
 
-async function typeAndHeartEffect(init = 0) {
+async function typeAndHeartEffect() {
 
   const TypeIt = (await import('typeit')).default;
   const KUTE = (await import('kute.js')).default;
@@ -12,7 +12,6 @@ async function typeAndHeartEffect(init = 0) {
     {"name": "daisyUI", "link": "https://daisyui.com"},
     {"name": "TypeIt", "link": "https://www.typeitjs.com"},
     {"name": "KUTE.js", "link": "https://thednp.github.io/kute.js/"},
-    {"name": "Claude 3.5", "link": "https://claude.ai"},
     {"name": "Font Awesome", "link": "https://fontawesome.com/"},
     {"name": "Animista", "link": "https://animista.net"},
   ];
