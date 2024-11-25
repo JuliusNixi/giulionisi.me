@@ -2,8 +2,10 @@
 window.typeItInstanceHomePage = null;
 window.kuteAnimationHomePage = null;
 
+// Homepage writing effect.
 async function writeAndEndWriteEffect() {
 
+  // Not on homepage.
   if (window.location.pathname !== '/') return;
 
   const TypeIt = (await import('typeit')).default;
@@ -44,7 +46,7 @@ async function writeAndEndWriteEffect() {
   }
 
   // Writing effect homepage.
-  cleanupPreviousAnimations();
+  cleanupPreviousAnimations(0);
   typeItInstanceHomePage = new TypeIt("#title", {afterComplete: () => endWritingEffect(),}).go();
 
 

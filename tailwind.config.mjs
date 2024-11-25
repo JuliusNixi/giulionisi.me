@@ -10,7 +10,19 @@ export default {
 	],
 	  // daisyUI config (optional - here are the default values)
 	  daisyui: {
-		themes: false, // false: only light + dark | true: all themes | array: specific themes like this ["light", "dark", "cupcake"]
+		themes: [
+			{
+				light: {
+					...require("daisyui/src/theming/themes")["light"],
+					"primary": "#3C9EEF",
+				},
+				dark: {
+					...require("daisyui/src/theming/themes")["dark"],
+					"primary": "#3C9EEF",
+				},
+			},
+		],
+		//themes: false, // false: only light + dark | true: all themes | array: specific themes like this ["light", "dark", "cupcake"]
 		darkTheme: "dark", // name of one of the included themes for dark mode
 		base: true, // applies background color and foreground color for root element by default
 		styled: true, // include daisyUI colors and design decisions for all components

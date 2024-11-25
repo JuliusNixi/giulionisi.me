@@ -2,9 +2,10 @@
 import Navbar from "./Navbar.astro";
 ---
 
-<div transition:persist class="navbar mb-8">
+<div transition:persist class="navbar mb-2 mt-2">
     <div class="navbar-start">
 
+      <!-- Mobile -->
       <div class="dropdown">
         <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
           <svg
@@ -22,8 +23,16 @@ import Navbar from "./Navbar.astro";
         </div>
         <ul
           tabindex="0"
-          class="menu menu-sm dropdown-content rounded-box w-24 z-10">
+          class="menu menu-md bg-base-100 rounded-box dropdown-content z-20 text-base">
           <Navbar />
+          <li>
+            <a>Things I love</a>
+            <ul class="p-2">
+                <li><a>Meme</a></li>
+                <li><a>Quotes</a></li>
+                <li><a>Music</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
 
@@ -33,13 +42,26 @@ import Navbar from "./Navbar.astro";
       
     </div>
 
+    <!-- Desktop -->
     <div class="navbar-center hidden lg:flex">
-      <ul class="menu menu-horizontal text-base">
+      <ul class="menu menu-horizontal text-base bg-base-100">
         <Navbar />
+        <li>
+          <details>
+            <summary>Things I love</summary>
+            <ul class="rounded-t-none">
+              <li><a>Meme</a></li>
+              <li><a>Quotes</a></li>
+              <li><a>Music</a></li>
+            </ul>
+          </details>
+      </li>
       </ul>
     </div>
 
-    <div class="navbar-end"></div>
+    <div class="navbar-end">
+      <!-- End Navbar Placeholder -->
+    </div>
 
   </div>
 

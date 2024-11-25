@@ -13,7 +13,6 @@ async function typeAndHeartEffect() {
     {"name": "TypeIt", "link": "https://www.typeitjs.com"},
     {"name": "KUTE.js", "link": "https://thednp.github.io/kute.js/"},
     {"name": "Font Awesome", "link": "https://fontawesome.com/"},
-    {"name": "Animista", "link": "https://animista.net"},
   ];
 
   function cleanupPreviousAnimations() {
@@ -97,4 +96,5 @@ document.addEventListener('astro:page-load', () => {
       else alert(captchawrong);
   });
 });
+
 

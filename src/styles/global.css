@@ -5,6 +5,7 @@
     user-select: none; /* Standard */
 } 
 
-
-
+.navbar-active {
+    @apply text-primary font-bold;
+}
 

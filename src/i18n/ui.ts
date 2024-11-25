@@ -9,7 +9,6 @@ export const languages = {
     en: {
       'nav.home': 'Home',
       'nav.about': 'About',
-      'nav.twitter': 'Twitter',
     },
     it: {
       'nav.home': 'Pagina Principale',

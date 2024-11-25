@@ -8,8 +8,9 @@ import Layout from '../../layouts/Layout.astro';
     <ul class="text-xl">
         {sortedPosts.map((post) => (
         <li class="my-4">
-            <a href={post.url}>{post.frontmatter.title}</a>
+            <a href={post.url}>{post.frontmatter.title} &nbsp;&nbsp;&nbsp;&nbsp; {post.frontmatter.date}</a>
         </li>
         ))}
     </ul>
 </Layout>
+

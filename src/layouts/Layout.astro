@@ -5,6 +5,7 @@ interface Props {
 const { title } = Astro.props;
 
 import '../styles/global.css';
+
 import 'katex/dist/katex.min.css';
 
 import Head from '../components/Head.astro'
@@ -14,20 +15,22 @@ import Scripts from '../components/Scripts.astro';
 
 import { fade } from 'astro:transitions';
 
+const currentLocale = Astro.currentLocale;
+
 ---
 
 <!doctype html>
-<html>
+<html lang={currentLocale}>
     <head>
         <Head />
         <title>{title}</title>
     </head>
 
-    <body class="no-select flex flex-col min-h-screen px-8 py-8">
+    <body class="no-select flex flex-col min-h-screen px-6 py-6">
 
       <Header />
 
-        <main transition:animate={fade({ duration: '1s' })} class="flex-grow flex flex-col justify-center items-center"> 
+        <main transition:animate={fade({ duration: '0.5s' })} class="flex-grow flex flex-col justify-center items-center"> 
 
             <slot /> 
             
