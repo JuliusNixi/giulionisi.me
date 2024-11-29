@@ -1,0 +1,12 @@
+---
+const {musictitle, videoid} = Astro.props
+---
+<div class="flex w-4/6 h-64 justify-center pb-6">
+    <iframe
+      class="rounded-lg shadow-lg w-full h-full"
+      src={"https://www.youtube.com/embed/" + videoid}
+      title={"YouTube Video Music Player | " + musictitle}
+      allow="picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>

@@ -1,0 +1,27 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Quote">
+    <article class="prose">
+        <h2 class="text-center">Quote</h2>
+        <p>This page has some inspirational quotes that I love...</p>
+            <blockquote>
+                <p id="quote">Success is not the key to happiness. Happiness is the key to success.</p>
+                <footer id="author">- Albert Schweitzer</footer>
+            </blockquote>
+    </article>
+    <script is:inline>
+        var quotes = [
+            {
+                quote: "Success is not the key to happiness. Happiness is the key to success.",
+                author: "Albert Schweitzer"
+            },
+        ]
+        // Chose a random quote.
+        var randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+        document.getElementById("quote").textContent = randomQuote.quote;
+        document.getElementById("author").textContent = "~ " + randomQuote.author;
+    </script>
+</Layout>
+

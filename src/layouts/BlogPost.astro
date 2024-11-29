@@ -4,7 +4,9 @@ import Layout from './Layout.astro';
 ---
 
 <Layout title={frontmatter.title}>
-    <article class="prose">
+    <article class="prose py-8">
+        <h1>{frontmatter.title}</h1>
+        <h4>Published on: {frontmatter.date}</h4>
       <slot />
     </article>
 </Layout>

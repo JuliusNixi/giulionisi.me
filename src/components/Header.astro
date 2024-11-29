@@ -1,5 +1,7 @@
 ---
 import Navbar from "./Navbar.astro";
+import NavbarThingsLoved from "./NavbarThingsLoved.astro";
+import NavbarUtils from "./NavbarUtils.astro";
 ---
 
 <div transition:persist class="navbar mb-2 mt-2">
@@ -28,10 +30,16 @@ import Navbar from "./Navbar.astro";
           <li>
             <a>Things I love</a>
             <ul class="p-2">
-                <li><a>Meme</a></li>
-                <li><a>Quotes</a></li>
-                <li><a>Music</a></li>
+              <NavbarThingsLoved />
             </ul>
+          </li>
+          <li>
+            <details>
+              <summary>Utils</summary>
+              <ul class="rounded-t-none">
+                <NavbarUtils />
+              </ul>
+            </details>
           </li>
         </ul>
       </div>
@@ -50,12 +58,18 @@ import Navbar from "./Navbar.astro";
           <details>
             <summary>Things I love</summary>
             <ul class="rounded-t-none">
-              <li><a>Meme</a></li>
-              <li><a>Quotes</a></li>
-              <li><a>Music</a></li>
+              <NavbarThingsLoved />
             </ul>
           </details>
-      </li>
+        </li>
+        <li>
+          <details>
+            <summary>Utils</summary>
+            <ul class="rounded-t-none">
+              <NavbarUtils />
+            </ul>
+          </details>
+        </li>
       </ul>
     </div>
 

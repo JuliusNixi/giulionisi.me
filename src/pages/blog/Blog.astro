@@ -1,13 +1,52 @@
 ---
+import { parse } from 'date-fns';
 const allPosts = await Astro.glob('./posts/*.md');
-const sortedPosts = allPosts.sort((a, b) => Math.floor(new Date(b.frontmatter.date).getTime() / 1000) - Math.floor(new Date(a.frontmatter.date).getTime() / 1000));
+const sortedPosts = allPosts.sort((a, b) => parse(a.frontmatter.date, 'dd-MM-yyyy', new Date()).getTime() - parse(b.frontmatter.date, 'dd-MM-yyyy', new Date()).getTime()).reverse();
 import Layout from '../../layouts/Layout.astro';
 ---
-
 <Layout title="Blog">
-    <ul class="text-xl">
+    <article class="prose text-center mb-6">
+        <h2>Blog 📄</h2>
+        <hr>
+    </article>
+    <script>
+        function filterPosts(btnClicked) {
+            const allPosts = document.querySelectorAll('.post');
+            const allButtons = document.querySelectorAll('.btn-outline');
+            const clickedButton = btnClicked;
+
+            for (let button of allButtons) {
+                button.classList.remove('btn-primary');
+                if (button === clickedButton) {
+                    button.classList.add('btn-primary');
+                }
+            }
+            for (let post of allPosts) {
+                let tags = post.getAttribute('data-tags').split(',').map((tag) => tag.trim().toLowerCase());
+                tags.push('all');
+                if (!tags.includes(btnClicked.textContent.toLowerCase())) {
+                    post.classList.add('hidden');
+                } else {
+                    post.classList.remove('hidden');
+                }
+            }
+        }
+        document.querySelectorAll('.btn-outline').forEach((button) => {
+            button.addEventListener('click', (e) => {
+                const sender = e.target as HTMLElement;
+                const btnClicked = sender;
+                filterPosts(btnClicked);
+            });
+        });
+    </script>
+    <div class="flex flex-col lg:flex-row">
+        <button class="btn btn-outline mb-3 lg:mr-3">All</button>
+        <button class="btn btn-outline mb-3 lg:mr-3">Tag 1</button>
+        <button class="btn btn-outline mb-3 lg:mr-3">Tag 2</button>
+    </div>
+    <ul class="text-xl text-center">
         {sortedPosts.map((post) => (
-        <li class="my-4">
+        <li class="post my-4" data-tags={post.frontmatter.tags}>
             <a href={post.url}>{post.frontmatter.title} &nbsp;&nbsp;&nbsp;&nbsp; {post.frontmatter.date}</a>
         </li>
         ))}

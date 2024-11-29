@@ -1,10 +1,9 @@
 ---
-title: "Post 1"
+title: "L'Incredibile Mondo dei Pinguini"
 date: "31-07-2024"
 layout: "../../../layouts/BlogPost.astro"
+tags: "Tag 1"
 ---
-
-# L'Incredibile Mondo dei Pinguini
 
 ![Pinguini](https://www.repstatic.it/content/contenthub/img/2023/08/28/115230841-50e3ad86-dabd-4775-b359-f32848cdc304.jpg)
 

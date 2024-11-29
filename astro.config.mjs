@@ -7,10 +7,12 @@ import rehypeKatex from 'rehype-katex'
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind()],
+
   markdown: {
     remarkPlugins: [remarkMath],
     rehypePlugins: [rehypeKatex],
   },
+
   i18n: {
     defaultLocale: "en",
     locales: ["it", "en"],
@@ -20,7 +22,25 @@ export default defineConfig({
     // If it/en is not working, try to change the fallback to the opposite.
     fallback: {
       "it": "en",
-      "en": "it"
     },
-  }
+  },
+
+  /*
+  Non usato alla fine la modalità hybrid.
+  La api deve essere in pages/api.
+  Il file api endpoint deve essere .ts.
+  import node from "@astrojs/node";
+  output: 'hybrid',
+  // Sostituire con Netlify in deploy.
+  adapter: node({
+    mode: "standalone"
+  })
+  */
+
+
+    redirects: {
+      '/blog/index.astro': '/blog/Blog',
+    },
+
+    
 });
