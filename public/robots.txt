@@ -2,5 +2,7 @@
 User-agent: *
 Allow: /
 
-# Sitemap location
-Sitemap: https://giulionisi.me/sitemap.xml 
+# Sitemap location.
+Sitemap: https://giulionisi.me/sitemap.xml
+
+# https://tinyurl.com/rob0ts

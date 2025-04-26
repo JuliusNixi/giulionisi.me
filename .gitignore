@@ -1,20 +1,20 @@
-# build output
+# Build directory.
 dist/
 
-# generated types
+# Generated astro files.
 .astro/
 
-# dependencies
+# Node modules.
 node_modules/
 
-# VS Code settings
+# VS Code settings.
 .vscode/
 
-# logs
+# NPM logs.
 npm-debug.log*
 
-# macOS-specific files
+# macOS file system files.
 .DS_Store
 
-# background processes logs
+# Background processes logs.
 nohup.out
