@@ -1,14 +1,31 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import YouTubeMusicVideo from '../components/YouTubeMusicVideo.astro'
+import "../styles/music.css"
 ---
 <Layout title="Music">
     <article class="prose pb-6">
         <h2 class="text-center">Music</h2>
-        <p>This page has some of my favourite music...</p>
+        <p>This page has some of my favourite music (and some film scenes)...</p>
     </article>
+
     <YouTubeMusicVideo musictitle="Quale Occhio" videoid="BcMKASngU8c"/>
+    <YouTubeMusicVideo musictitle="Pirates of the Caribbean" videoid="M8VB5Ye3XLM"/>
+    <YouTubeMusicVideo musictitle="Someone You Loved" videoid="bCuhuePlP8o"/>
     <YouTubeMusicVideo musictitle="Libiamo, ne' lieti calici" videoid="afhAqMeeQJk"/>
-    
+    <YouTubeMusicVideo musictitle="O mio babbino caro" videoid="g0Kcg7WEJME"/>
+    <YouTubeMusicVideo musictitle="River Flows In You" videoid="7maJOI3QMu0"/>
+
+
+    <script defer src="https://unpkg.com/scrollreveal@4"></script>
+    <script defer>
+        function reveal() {
+            window.sr = ScrollReveal();
+            sr.reveal('.music-video', {
+                delay: 100
+            });
+        }
+        //document.addEventListener('astro:page-load', reveal);
+    </script>
 </Layout>
 

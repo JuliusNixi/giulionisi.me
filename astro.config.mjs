@@ -41,6 +41,10 @@ export default defineConfig({
     redirects: {
       '/blog/index.astro': '/blog/Blog',
     },
+    prefetch: {
+      prefetchAll: true,
+      defaultStrategy: 'viewport'
+    }
 
     
 });

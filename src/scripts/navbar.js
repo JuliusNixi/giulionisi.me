@@ -11,3 +11,9 @@ document.addEventListener('astro:page-load', () => {
     }
   }
 });
+document.addEventListener("astro:page-load", () => {
+  document.getElementsByTagName("html")[0].addEventListener("click", (e) => {
+    if (e.target.getAttribute("class")?.indexOf("close-dropdown") !== -1) {
+      e.target.parentElement.parentElement.setAttribute("class", "navbar-element")
+    }
+})});

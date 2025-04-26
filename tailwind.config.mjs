@@ -13,11 +13,9 @@ export default {
 		themes: [
 			{
 				light: {
-					...require("daisyui/src/theming/themes")["light"],
 					"primary": "#3C9EEF",
 				},
 				dark: {
-					...require("daisyui/src/theming/themes")["dark"],
 					"primary": "#3C9EEF",
 				},
 			},

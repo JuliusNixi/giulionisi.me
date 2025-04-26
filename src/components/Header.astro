@@ -8,7 +8,7 @@ import NavbarUtils from "./NavbarUtils.astro";
     <div class="navbar-start">
 
       <!-- Mobile -->
-      <div class="dropdown">
+      <div class="dropdown z-10">
         <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -28,14 +28,16 @@ import NavbarUtils from "./NavbarUtils.astro";
           class="menu menu-md bg-base-100 rounded-box dropdown-content z-20 text-base">
           <Navbar />
           <li>
-            <a>Things I love</a>
-            <ul class="p-2">
+            <details>
+            <summary class="close-dropdown">Things I love</summary>
+            <ul class="rounded-t-none">
               <NavbarThingsLoved />
             </ul>
+          </details>
           </li>
           <li>
             <details>
-              <summary>Utils</summary>
+              <summary class="close-dropdown">Utils</summary>
               <ul class="rounded-t-none">
                 <NavbarUtils />
               </ul>
@@ -51,12 +53,12 @@ import NavbarUtils from "./NavbarUtils.astro";
     </div>
 
     <!-- Desktop -->
-    <div class="navbar-center hidden lg:flex">
+    <div class="navbar-center hidden lg:flex z-10">
       <ul class="menu menu-horizontal text-base bg-base-100">
         <Navbar />
         <li>
           <details>
-            <summary>Things I love</summary>
+            <summary class="close-dropdown">Things I love</summary>
             <ul class="rounded-t-none">
               <NavbarThingsLoved />
             </ul>
@@ -64,7 +66,7 @@ import NavbarUtils from "./NavbarUtils.astro";
         </li>
         <li>
           <details>
-            <summary>Utils</summary>
+            <summary class="close-dropdown">Utils</summary>
             <ul class="rounded-t-none">
               <NavbarUtils />
             </ul>

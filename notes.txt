@@ -1,6 +1,22 @@
 First designed for mobile, the classes without media selector are applied on mobile by default.
 On large screens, using the selector lg: we specify classes for large screens that override the default ones.
 
+AGGIUNGERE MUSICA DA SPOTIFY
+
+    <YouTubeMusicVideo musictitle="Nuvole Bianche" videoid="VUCI-1vIbUo"/>
+    <YouTubeMusicVideo musictitle="Amistad" videoid="egpBcDKUnS4"/>
+    <YouTubeMusicVideo musictitle="Jurassic Park" videoid="XqxOFP9aRIw"/>
+    <YouTubeMusicVideo musictitle="Spirit Homeland" videoid="Cqm59Zo7xfI"/>
+    <YouTubeMusicVideo musictitle="Carmen Overture" videoid="jL-Csf1pNCI"/>
+    <YouTubeMusicVideo musictitle="Ode to Joy" videoid="GBaHPND2QJg"/>
+    <YouTubeMusicVideo musictitle="Canon D" videoid="Ptk_1Dc2iPY"/>
+    <YouTubeMusicVideo musictitle="Perfect Synphony" videoid="eiDiKwbGfIY"/>
+    <YouTubeMusicVideo musictitle="My Heart Will Go On" videoid="9bFHsd3o1w0"/>
+    <YouTubeMusicVideo musictitle="Sogno di Volare" videoid="nAYtztCJvr0"/>
+    <YouTubeMusicVideo musictitle="Carols of the bells" videoid="k-W2Bkz_Rno"/>
+    <YouTubeMusicVideo musictitle="Angels we heard on high" videoid="n543eKIdbUI"/>
+
+
 <div class="lg:basis-3/4">
     <p>
     Ciao visitatore, in questa pagina troverai un po' di informazioni su di me...
@@ -44,3 +60,9 @@ On large screens, using the selector lg: we specify classes for large screens th
       Credo di soddisfare la definizione di multipotenziale. 
     </p>
   </div>
+
+
+To update packages with a GUI:
+npx npm-check -u
+
+
