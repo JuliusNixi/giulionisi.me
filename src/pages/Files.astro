@@ -1,0 +1,19 @@
+---
+import Layout from "../layouts/Layout.astro";
+let files = import.meta.glob('/src/files/*', {eager: true});
+let filesnames = Object.keys(files).map((element) => element.split("/").slice(-1)[0])
+---
+<Layout title="Files">
+    <article class="prose">
+        <h2 class="text-center">Files 💽</h2>
+        <hr>
+        <p>This page has some stuff that i used to share...</p>
+        <ul class="text-xl text-center">
+            {filesnames.map((file) => (
+                <li class="my-4">
+                    <a href={"/src/files/" + file}>{file}</a>
+                </li>
+            ))}
+        </ul>
+    </article>
+</Layout>

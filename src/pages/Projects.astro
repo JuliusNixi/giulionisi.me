@@ -1,0 +1,55 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Projects">
+    <!-- Defer executes the scripts in order and not asap. -->
+    <script defer src="https://cdn.jsdelivr.net/gh/juliusnixi/GitHub-Repos-WebCards@2.0.1/ghreposcards.js"></script>
+    <article class="prose text-center mb-6">
+        <h2>Projects 🛠️</h2>
+        <hr>
+    </article>
+
+    <div class="card bg-amber-900 text-primary-content w-96">
+        <div class="card-body">
+          <h2 class="card-title">Card title!</h2>
+          <p>If a dog chews shoes whose shoes does he choose?</p>
+          <div class="card-actions justify-end">
+            <button class="btn btn-md">Buy Now</button>
+          </div>
+        </div>
+      </div>
+
+
+    <gh-repos-cards
+    style="display: none;"
+    data-user="JuliusNixi"
+    data-repo="%all"
+    data-sort="created"
+    data-direction="desc">
+
+        <div
+        class="gh-repos-cards-div">
+
+            <p class="gh-repos-cards-username">Owner's username: </p>
+            <p class="gh-repos-cards-name">Repo's name: </p>
+            <p class="gh-repos-cards-description">Repo's description: </p>
+            <ul class="gh-repos-cards-topics">Repo's topics: </ul>
+            <ul class="gh-repos-cards-languages">Repo's languages: </ul>
+
+        </div>
+
+    </gh-repos-cards>
+    <script is:inline>
+        document.addEventListener('astro:page-load', () => {
+            try {
+                if (window.location.pathname === '/Projects') {
+                    let p = GHRepoCardsInit(true);
+                    p.then(() => {
+                    }).catch(() => {
+                    });
+                }
+            } catch (e) {
+            }
+        });
+    </script>
+</Layout>
